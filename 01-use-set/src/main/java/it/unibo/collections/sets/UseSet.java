@@ -35,6 +35,7 @@ public final class UseSet {
         /*
          * 3) Prints its content
          */
+        System.out.println(set);
         /*
          * 4) Removes all those strings whose represented number is divisible by three.
          * Note: the method removeIf(Predicate) is not allowed.

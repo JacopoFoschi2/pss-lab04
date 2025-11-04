@@ -41,7 +41,7 @@ public final class UseSet {
          * Note: the method removeIf(Predicate) is not allowed.
          */
         for (int i = 0; i < ELEMS; i++) {
-            if(set.contains(Integer.toString(i)) && i % 2 == 3) {
+            if(set.contains(Integer.toString(i)) && i % 3 == 0) {
                 set.remove(Integer.toString(i));
             }
         }
@@ -54,5 +54,18 @@ public final class UseSet {
         /*
          * 6) Verifies whether all the numbers left in the set are even
          */
-    }
+        even = True;
+        for (int i = 0; i < set.size(); i++) {
+            if(set.contains(Integer.toString(i)) && i % 2 == 1) {
+                even = false;
+            }
+            if (even == false) {
+                break;
+            }
+        }
+        if (even) {
+            System.out.println("even");
+        } else  {
+            System.out.println("not even");
+        }
 }

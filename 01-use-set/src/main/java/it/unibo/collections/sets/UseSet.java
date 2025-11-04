@@ -30,7 +30,7 @@ public final class UseSet {
          * "20" (both included)
          */
         for (int i = 0; i < ELEMS; i++) {
-            set.add(i);
+            set.add(Integer.toString(i));
         }
         /*
          * 3) Prints its content
@@ -40,9 +40,9 @@ public final class UseSet {
          * 4) Removes all those strings whose represented number is divisible by three.
          * Note: the method removeIf(Predicate) is not allowed.
          */
-        for (int i = 0; i < ELEMS; i++) {
-            if(set.contains(Integer.toString(i)) && i % 3 == 0) {
-                set.remove(Integer.toString(i));
+        for (string element : set) {
+            if(Integer.parse(element) % 3 == 0) {
+                set.remove(element);
             }
         }
         /*
@@ -54,12 +54,10 @@ public final class UseSet {
         /*
          * 6) Verifies whether all the numbers left in the set are even
          */
-        even = True;
-        for (int i = 0; i < set.size(); i++) {
-            if(set.contains(Integer.toString(i)) && i % 2 == 1) {
+        boolean even = true;
+        for (string element : set) {
+            if(Integer.parse(element) % 2 == 1) {
                 even = false;
-            }
-            if (even == false) {
                 break;
             }
         }

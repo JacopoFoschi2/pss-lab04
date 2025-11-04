@@ -1,13 +1,13 @@
 package it.unibo.collections.sets;
 
 import java.util.Collection;
+import java.Util.Set;
 
 /**
  * Example class using {@link java.util.Set}.
  *
  */
 public final class UseSet {
-
     private static final int ELEMS = 20;
 
     private UseSet() {
@@ -24,6 +24,7 @@ public final class UseSet {
          *
          * 1) Builds a TreeSet containing Strings
          */
+        final Collection<String> set = new TreeSet<>();
         /*
          * 2) Populates such Collection with all the Strings representing numbers ranging from "1" to
          * "20" (both included)

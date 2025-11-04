@@ -40,6 +40,11 @@ public final class UseSet {
          * 4) Removes all those strings whose represented number is divisible by three.
          * Note: the method removeIf(Predicate) is not allowed.
          */
+        for (int i = 0; i < ELEMS; i++) {
+            if(set.contains(Integer.toString(i)) && i % 2 == 3) {
+                set.remove(Integer.toString(i));
+            }
+        }
         /*
          * 5) Prints the content of the Set using a for-each construct
          */

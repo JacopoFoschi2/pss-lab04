@@ -29,6 +29,9 @@ public final class UseSet {
          * 2) Populates such Collection with all the Strings representing numbers ranging from "1" to
          * "20" (both included)
          */
+        for (int i = 0; i < ELEMS; i++) {
+            set.add(i);
+        }
         /*
          * 3) Prints its content
          */
